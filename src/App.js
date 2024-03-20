@@ -12,6 +12,7 @@ import AboutUs from './AboutUs';
 import Login from './Login';
 import SignUp from './SignUp';
 import Events from './Events';
+import Explore from './Explore';
 
 function App(){ 
   return (
@@ -22,6 +23,8 @@ function App(){
       <Route path='login' element={<Login />} />
       <Route path='signup' element={<SignUp />} />
       <Route path='events' element={<Events />} />
+      <Route path='explore' element={<Explore />} />
+      
       </Routes>
       
   );
