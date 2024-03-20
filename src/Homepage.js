@@ -38,7 +38,10 @@ function Homepage(){
           </p>
         </h3>
         </Accordion>
-        <Button variant="dark" style={{marginLeft:'70px',marginBottom:'20px'}}>Explore</Button>
+ 
+        <Button variant="dark" style={{marginLeft:'70px',marginBottom:'20px'}}> 
+        <Nav.Link><Link to={"/Explore"}>Explore</Link></Nav.Link>
+        </Button>
         <Container>
         <Row>
           <Col xs><img src='https://static.toiimg.com/thumb/msid-103932887,imgsize-1000433,width-400,resizemode-4/103932887.jpg' id='myimg' width='260px'></img></Col>
