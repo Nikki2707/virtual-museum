@@ -37,13 +37,11 @@
   }
 }
 
-nav a {
-  background-color: aliceblue;
-}
 
-#myimg{border-radius: 16px;
+
+/* #myimg{border-radius: 16px;
    transition: transform 0.4s;}
-   img:hover{transform: scale(1.2);}
+   img:hover{transform: scale(1.2);} */
 
 #para{
 text-align: center;
