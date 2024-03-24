@@ -1,54 +1,105 @@
 import React from 'react';
-import Container from 'react-bootstrap/Container';
+import axios from "axios";
+import { useState, useEffect } from 'react';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+import { Card, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Accordion from 'react-bootstrap/Accordion';
 import { Button } from 'react-bootstrap';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import { Link , NavLink } from 'react-router-dom';
-
+import Collapse from 'react-bootstrap/Collapse';
+import './Homepage.css';
  
 function Homepage(){
+  const [apod, setApod] = useState({});
+  const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    // Fetch Astronomy Picture of the Day
+    axios.get('https://api.nasa.gov/planetary/apod?api_key=diO51zeLGvrk6PIn1wIqHeW94DZR9uRB1Z2agnh6')
+      .then(response => {
+        setApod(response.data);
+      })
+      .catch(error => {
+        console.error('Error fetching APOD:', error);
+      });
+  })
+
     return(
-      <><Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
-        <Container>
+      <>
+      <div class="bg-dark text-light p-4">
+      <Navbar bg="dark" variant="dark">
           <Navbar.Brand href="#home">Virtual-Museum</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
-            <Nav.Link><Link to={"/aboutus"}>About Us</Link></Nav.Link>   
-              <Nav.Link><Link to={"/events"}>Events</Link></Nav.Link>
-            </Nav>
-            <Nav>
-            <Nav.Link><Link to={"/login"}>Login</Link></Nav.Link>
-            <Nav.Link><Link to={"/signup"}>
-                Sign Up
-              </Link></Nav.Link>
+            <Nav.Link><Link to={"/aboutus"} className="nav-link">About Us</Link></Nav.Link>   
+              <Nav.Link><Link to={"/events"} className="nav-link">Events</Link></Nav.Link>
             </Nav>
           </Navbar.Collapse>
-        </Container>
       </Navbar>
-      <Accordion>
-      <h3 style={{Color:'black',marginLeft:'70px',marginBottom:'40px'}}>
+      </div>
+      <div class="bg-dark text-light p-4">
+      <h3 class="display-4 fw-bold">
          <p>Explore dreams, surrealism, <br />
           and the subconcious mind
           </p>
         </h3>
-        </Accordion>
- 
-        <Button variant="dark" style={{marginLeft:'70px',marginBottom:'20px'}}> 
-        <Nav.Link><Link to={"/Explore"}>Explore</Link></Nav.Link>
+        
+        <Button style={{marginBottom:"2rem"}}> 
+        <Link to={"/Explore"} className="nav-link">Explore</Link>
         </Button>
-        <Container>
-        <Row>
-          <Col xs><img src='https://static.toiimg.com/thumb/msid-103932887,imgsize-1000433,width-400,resizemode-4/103932887.jpg' id='myimg' width='260px'></img></Col>
-          <Col xs={{ order: 12 }}><img src='https://static.toiimg.com/thumb/msid-103932887,imgsize-1000433,width-400,resizemode-4/103932887.jpg' id='myimg' width='260px'></img></Col>
-          <Col xs={{ order: 1 }}><img src='https://static.toiimg.com/thumb/msid-103932887,imgsize-1000433,width-400,resizemode-4/103932887.jpg' id='myimg' width='260px'></img></Col>
-        </Row>
-      </Container>
+        
+        
+     
+    <Col>
+      <Row> 
+      <Card className="event-card">
+      {/* <Card.Body>
+      <h6>Astronomy Picture of the Day</h6>
+      </Card.Body> */}
+        <Card.Img variant="top" src={apod.url} className="zoomable-picture" />
+        <Card.Body>
+        <Card.Title style={{color:"white"}} >{apod.title}</Card.Title>
+        <Card.Text style={{color:"white"}}>
+        Astronomy Picture of the Day
+        </Card.Text>
+        <Button variant="primary" onClick={() => setOpen(!open)}
+        aria-controls="example-collapse-text"
+        aria-expanded={open}
+        >Know more
+        </Button>
+        <Collapse in={open}>
+        <div style={{color:"white"}} id="example-collapse-text">
+          {apod.explanation}
+        </div>
+      </Collapse>
+      </Card.Body>
+      </Card>
+
+      <Card className="event-card">
+        <Card.Img variant="top" src="https://imageio.forbes.com/specials-images/imageserve/577c129fd7c6ee6a37c42b99/This-is-the-Milky-Way-from-Concordia-Camp--in-Pakistan-s-Karakoram-Range-/960x0.jpg?format=jpg&width=960" className="zoomable-picture" />
+        <Card.Body>
+        <Card.Title style={{color:"white"}}>Explore the gallery</Card.Title>
+        <Button>
+        <Link to={"/Explore"} className="nav-link">Explore</Link>
+        </Button>
+        </Card.Body>
+      </Card>
+
+      <Card className="event-card">
+        <Card.Img variant="top" src="https://c4.wallpaperflare.com/wallpaper/363/364/42/mars-space-light-surface-wallpaper-preview.jpg" className="zoomable-picture" />
+        <Card.Body>
+        <Card.Title style={{color:"white"}}>Mars Corner</Card.Title>
+        <Button>
+        <Link to={"/Mars"} className="nav-link">Explore</Link>
+        </Button>
+        </Card.Body>
+      </Card>
+      </Row>
+    </Col>
+    </div>
+      
   </>        
     );
 }

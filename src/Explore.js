@@ -6,55 +6,58 @@ import { Card, Container, Row, Col } from 'react-bootstrap';
 
 
 function Explore(){
-  const [apod, setApod] = useState({});
   const [astronomicalBodies, setAstronomicalBodies] = useState([]);
 
   useEffect(() => {
-    // Fetch Astronomy Picture of the Day
-    axios.get('https://api.nasa.gov/planetary/apod?api_key=diO51zeLGvrk6PIn1wIqHeW94DZR9uRB1Z2agnh6')
-      .then(response => {
-        setApod(response.data);
-      })
-      .catch(error => {
-        console.error('Error fetching APOD:', error);
-      });
 
     // Fetch information about different astronomical bodies
-    axios.get('https://api.nasa.gov/neo/rest/v1/neo/browse?api_key=diO51zeLGvrk6PIn1wIqHeW94DZR9uRB1Z2agnh6')
-      .then(response => {
-        setAstronomicalBodies(response.data.near_earth_objects);
-      })
-      .catch(error => {
-        console.error('Error fetching astronomical bodies:', error);
+    axios.get('https://images-api.nasa.gov/search?q=star')
+    .then(response => {
+      // Extract relevant data from the API response
+      const items = response.data.collection.items;
+      const starData = items.map(item => {
+        // Check if 'data' and 'links' arrays exist
+        if (item.data && item.data.length > 0 && item.links && item.links.length > 0) {
+          return {
+            name: item.data[0].title,
+            description: item.data[0].description,
+            image: item.links[0].href
+          };
+        } else {
+          // Return null if data is missing
+          return null;
+        }
       });
-  }, []);
+      // Filter out null values
+      const filteredStarData = starData.filter(star => star !== null);
+      // Set the star data to state
+      setAstronomicalBodies(filteredStarData);
+    })
+    .catch(error => {
+      console.error('Error fetching star data:', error);
+    });
+}, []);
+
 
   return (
+    <div class="bg-dark text-light p-4">
     <Container>
-      <h1>Astronomy Picture of the Day</h1>
-      <Card>
-        <Card.Img variant="top" src={apod.url} />
-        <Card.Body>
-          <Card.Title>{apod.title}</Card.Title>
-          <Card.Text>{apod.explanation}</Card.Text>
-        </Card.Body>
-      </Card>
-
       <h1>Astronomical Bodies</h1>
       <Row>
         {astronomicalBodies.map(body => (
           <Col key={body.id} md={4} className="mb-4">
-            <Card>
-              <Card.Img variant="top" src="https://via.placeholder.com/150" />
+            <Card className={"boder border-dark bg-dark"}>
+              <Card.Img variant="top" src={body.image} />
               <Card.Body>
-                <Card.Title>{body.name}</Card.Title>
-                <Card.Text>{body.nasa_jpl_url}</Card.Text>
+                <Card.Title style={{color:"white"}}>{body.name}</Card.Title>
+                <Card.Text style={{color:"white"}}>{body.description}</Card.Text>
               </Card.Body>
             </Card>
           </Col>
         ))}
       </Row>
     </Container>
+    </div>
   );
 
      

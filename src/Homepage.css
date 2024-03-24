@@ -1,0 +1,21 @@
+.event-card {
+    background: #000;
+    width: 500px;
+    margin: 10px;
+    overflow: hidden;
+  }
+
+  .event-card-mars {
+    background: #000;
+    padding: initial;
+    margin: 10px;
+    overflow: hidden;
+  }
+  
+  .zoomable-picture {
+    transition: transform 0.5s;
+  }
+  
+ .zoomable-picture:hover {
+    transform: scale(1.2);
+  }
