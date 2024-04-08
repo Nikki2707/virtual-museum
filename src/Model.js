@@ -9,7 +9,7 @@ function Model(){
         <h1 style={{margin:"14px", marginBottom:"35px"}}>3D models</h1>
         <Row> 
     <Col md={4}> 
-    <Card className={"border border-light bg-dark"} style={{width:"fit-content", margin:"10px"}}>
+    <Card className={"border border-dark bg-dark"} style={{width:"fit-content", margin:"10px"}}>
     <Card.Body>
     <iframe title="Mercury" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/0a7a8958d49944f1aef057951daa8fd3/embed" style={{width:"30rem", height:"25rem"}}> </iframe> 
     <p style={{fontSize: '13px', fontWeight: 'normal', margin: '5px', color: '#4A4A4A'}}> 
@@ -30,7 +30,7 @@ function Model(){
     </Col>
 
     <Col md={4}>
-    <Card className={"border border-light bg-dark"} style={{width:"fit-content", margin:"10px"}}> 
+    <Card className={"border border-dark bg-dark"} style={{width:"fit-content", margin:"10px"}}> 
     <Card.Body>
     <iframe title="Venus" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/b306aaadbf2b4fcea1afa2db5ed75b4f/embed" style={{width:"30rem", height:"25rem"}}> </iframe> 
     <p style={{fontSize: '13px', fontWeight: 'normal', margin: '5px', color: '#4A4A4A'}}> 
@@ -51,7 +51,7 @@ function Model(){
     </Col>
 
     <Col md={4}>
-    <Card className={"border border-light bg-dark"} style={{width:"fit-content", margin:"10px"}}>
+    <Card className={"border border-dark bg-dark"} style={{width:"fit-content", margin:"10px"}}>
     <Card.Body>
     <iframe title="Earth like" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/3cc8fb92638b4395b5746ecf3c58c6bd/embed" style={{width:"30rem", height:"25rem"}}> </iframe> 
     <p style={{fontSize: '13px', fontWeight: 'normal', margin: '5px', color: '#4A4A4A'}}> 
@@ -72,7 +72,7 @@ function Model(){
     </Col>
 
     <Col md={4}>
-    <Card className={"border border-light bg-dark"} style={{width:"fit-content", margin:"10px"}}>
+    <Card className={"border border-dark bg-dark"} style={{width:"fit-content", margin:"10px"}}>
     <Card.Body>
     <iframe title="Mars: InSight Lander and Volcanic Regions" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/50bb6eb0d1104d43bf684d2b0f70de1d/embed" style={{width:"30rem", height:"25rem"}}> </iframe> 
     <p style={{fontSize: '13px', fontWeight: 'normal', margin: '5px', color: '#4A4A4A'}}> 
@@ -93,7 +93,7 @@ function Model(){
     </Col>
  
     <Col md={4}>
-    <Card className={"border border-light bg-dark"} style={{width:"fit-content", margin:"10px"}}>
+    <Card className={"border border-dark bg-dark"} style={{width:"fit-content", margin:"10px"}}>
     <Card.Body>
     <iframe title="jupiter" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/c5275eb96af245e4a8453837ac728a62/embed" style={{width:"30rem", height:"25rem"}}> </iframe> 
     <p style={{fontSize: '13px', fontWeight: 'normal', margin: '5px', color: '#4A4A4A'}}> 
@@ -114,7 +114,7 @@ function Model(){
     </Col>
 
     <Col md={4}>   
-    <Card className={"border border-light bg-dark"} style={{width:"fit-content", margin:"10px"}}> 
+    <Card className={"border border-dark bg-dark"} style={{width:"fit-content", margin:"10px"}}> 
     <Card.Body>
     <iframe title="Saturn Planet 3D" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/a4dbfeeeef9b47a383863d496baf546f/embed" style={{width:"30rem", height:"25rem"}}> </iframe> 
     <p style={{fontSize: '13px', fontWeight: 'normal', margin: '5px', color: '#4A4A4A'}}> 
@@ -136,7 +136,7 @@ function Model(){
 
 
     <Col md={4}>
-    <Card className={"border border-light bg-dark"} style={{width:"fit-content", margin:"10px"}}>
+    <Card className={"border border-dark bg-dark"} style={{width:"fit-content", margin:"10px"}}>
     <Card.Body>
     <iframe title="Uranus" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/3c7240d7affd4a30aa581b5551c60066/embed" style={{width:"30rem", height:"25rem"}}> </iframe> 
     <p style={{fontSize: '13px', fontWeight: 'normal', margin: '5px', color: '#4A4A4A'}}> 
@@ -157,7 +157,7 @@ function Model(){
     </Col>
 
     <Col md={4}>
-    <Card className={"border border-light bg-dark"} style={{width:"fit-content", margin:"10px"}}> 
+    <Card className={"border border-dark bg-dark"} style={{width:"fit-content", margin:"10px"}}> 
     <Card.Body>
     <iframe title="Neptune" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/947a405a0a4348f9a49ff4bd3ed3cc4b/embed" style={{width:"30rem", height:"25rem"}}> </iframe> 
     <p style={{fontSize: '13px', fontWeight: 'normal', margin: '5px', color: '#4A4A4A'}}> 
@@ -177,7 +177,7 @@ function Model(){
     </Card>
     </Col>
     <Col md={4}>
-        <Card className={"border border-light bg-dark"} style={{width:"fit-content", margin:"10px"}}>
+        <Card className={"border border-dark bg-dark"} style={{width:"fit-content", margin:"10px"}}>
         <Card.Body>
         <iframe title="Solar System" frameBorder="0" allowFullScreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/f7896d085f474ef28631d88129268411/embed" style={{width:"30rem", height:"25rem"}}></iframe> 
         <p style={{fontSize: '13px', fontWeight: 'normal', margin: '5px', color: '#4A4A4A'}}> 
@@ -200,7 +200,7 @@ function Model(){
         </Card>
         </Col>
     <Col md={4}>
-    <Card className={"border border-light bg-dark"} style={{width:"fit-content", margin:"10px"}}>
+    <Card className={"border border-dark bg-dark"} style={{width:"fit-content", margin:"10px"}}>
     <Card.Body>
     <iframe title="Moon" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/870de693475d436c8e925ab0bcda4ca4/embed" style={{width:"30rem", height:"25rem"}}> </iframe> 
     <p style={{fontSize: '13px', fontWeight: 'normal', margin: '5px', color: '#4A4A4A'}}> 
@@ -219,7 +219,7 @@ function Model(){
     </Col>
 
     <Col md={4}>
-    <Card className={"border border-light bg-dark"} style={{width:"fit-content", margin:"10px"}}>
+    <Card className={"border border-dark bg-dark"} style={{width:"fit-content", margin:"10px"}}>
     <Card.Body>
         <iframe title="Star-planet Magnetic Interaction" frameBorder="0" allowFullScreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/71a173d76fc6419a8965ba2580784a27/embed" style={{width:"30rem", height:"25rem"}}></iframe> 
         <p style={{fontSize: '13px', fontWeight: 'normal', margin: '5px', color: '#4A4A4A'}}> 
@@ -242,7 +242,7 @@ function Model(){
         </Col>
 
         <Col md={4}>
-        <Card className={"border border-light bg-dark"} style={{width:"fit-content", margin:"10px"}}>
+        <Card className={"border border-dark bg-dark"} style={{width:"fit-content", margin:"10px"}}>
         <Card.Body>
         <iframe title="Curiosity - Mars Rover" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/6c2f5ceea9034befa79f82dbd4f77dbb/embed" style={{width:"30rem", height:"25rem"}}> </iframe>
         <Card.Title style={{color:"white"}}>
