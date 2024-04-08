@@ -2,11 +2,20 @@ import React from "react";
 import axios from "axios";
 import { Button } from 'react-bootstrap';
 import { useEffect, useState} from 'react';
-import { Card, Container, Row, Col } from 'react-bootstrap';
+import { Card, Container, Row, Col, Modal } from 'react-bootstrap';
 
 
 function Explore(){
   const [astronomicalBodies, setAstronomicalBodies] = useState([]);
+  const [showModal, setShowModal] = useState(false);
+  const [currentCard, setCurrentCard] = useState({});
+
+  const handleCardClick = (cardData) => {
+    setCurrentCard(cardData);
+    setShowModal(true);
+  };
+
+  const handleClose = () => setShowModal(false);
 
   useEffect(() => {
 
@@ -40,13 +49,14 @@ function Explore(){
 
 
   return (
+    <>
     <div className="bg-dark text-light p-4">
     <Container>
       <h1>Astronomical Bodies</h1>
       <Row>
         {astronomicalBodies.map(body => (
           <Col key={body.id} md={4} className="mb-4">
-            <Card className={"border border-light bg-dark"}>
+            <Card className={"border border-light bg-dark"} onClick={() => handleCardClick(body)}>
               <Card.Img variant="top" src={body.image} />
               <Card.Body>
                 <Card.Title style={{color:"white"}}>{body.name}</Card.Title>
@@ -58,6 +68,17 @@ function Explore(){
       </Row>
     </Container>
     </div>
+
+<Modal show={showModal} onHide={handleClose} size="lg" aria-labelledby="contained-modal-title-vcenter" centered>
+<Modal.Header closeButton>
+  <Modal.Title>{currentCard.name}</Modal.Title>
+</Modal.Header>
+<Modal.Body>
+  <img src={currentCard.image} alt={currentCard.name} style={{ width: '100%' }}/>
+  <p>{currentCard.description}</p>
+</Modal.Body>
+</Modal>
+</>
   );
 
      

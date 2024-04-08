@@ -160,7 +160,7 @@ Mars has been extensively explored by robotic spacecraft, including orbiters, la
       <Card className="event-card-gallery">
         <Card.Img variant="top" src="https://media2.giphy.com/media/VOgpnDOAddaN0zr9UE/giphy.gif?cid=790b7611ordwgj83ykls5r01pebk53ajydycopwtuga7wu2t&ep=v1_gifs_search&rid=giphy.gif&ct=g" className="zoomable-picture" />
         <Card.Body>
-        <Card.Title style={{color:"white"}}>Mars Corner</Card.Title>
+        <Card.Title style={{color:"white"}}>3D models</Card.Title>
         <Button>
         <Link to={"/Model"} className="nav-link">Explore</Link>
         </Button>
