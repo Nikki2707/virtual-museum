@@ -40,13 +40,13 @@ function Explore(){
 
 
   return (
-    <div class="bg-dark text-light p-4">
+    <div className="bg-dark text-light p-4">
     <Container>
       <h1>Astronomical Bodies</h1>
       <Row>
         {astronomicalBodies.map(body => (
           <Col key={body.id} md={4} className="mb-4">
-            <Card className={"boder border-dark bg-dark"}>
+            <Card className={"border border-light bg-dark"}>
               <Card.Img variant="top" src={body.image} />
               <Card.Body>
                 <Card.Title style={{color:"white"}}>{body.name}</Card.Title>

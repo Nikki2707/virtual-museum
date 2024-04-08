@@ -5,9 +5,17 @@
     overflow: hidden;
   }
 
-  .event-card-mars {
+.event-card-mars {
     background: #000;
     padding: initial;
+    margin: 10px;
+    overflow: hidden;
+  }
+
+.event-card-gallery {
+    background: #000;
+    border: "white";
+    width: 500px;
     margin: 10px;
     overflow: hidden;
   }
@@ -17,5 +25,5 @@
   }
   
  .zoomable-picture:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
   }

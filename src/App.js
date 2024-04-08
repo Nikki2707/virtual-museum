@@ -6,6 +6,7 @@ import AboutUs from './AboutUs';
 import Events from './Events';
 import Explore from './Explore';
 import Mars from './Mars';
+import Model from './Model';
 
 function App(){ 
   return (
@@ -16,6 +17,7 @@ function App(){
       <Route path='events' element={<Events />} />
       <Route path='explore' element={<Explore />} />
       <Route path='mars' element={<Mars />} />
+      <Route path='model' element={<Model />} />
       </Routes>
       
   );
