@@ -1,17 +1,12 @@
 import Homepage from './Homepage';
 import './App.css';
-
-import Nav from 'react-bootstrap/Nav';
-
-import { Button } from 'react-bootstrap';
-
-import { Navbar, Container } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Route , Routes } from 'react-router-dom';
 import AboutUs from './AboutUs';
-import Login from './Login';
-import SignUp from './SignUp';
 import Events from './Events';
+import Explore from './Explore';
+import Mars from './Mars';
+import Model from './Model';
 
 function App(){ 
   return (
@@ -19,9 +14,10 @@ function App(){
     <Routes>
       <Route path='/' element={<Homepage />} />
       <Route path='aboutus' element={<AboutUs />} />
-      <Route path='login' element={<Login />} />
-      <Route path='signup' element={<SignUp />} />
       <Route path='events' element={<Events />} />
+      <Route path='explore' element={<Explore />} />
+      <Route path='mars' element={<Mars />} />
+      <Route path='model' element={<Model />} />
       </Routes>
       
   );
